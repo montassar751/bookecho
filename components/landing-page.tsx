@@ -161,7 +161,12 @@ export default function LandingPage() {
               <p className="text-xl mb-8 opacity-90">
                 Envie de découvrir ? Profitez de 3 jours d'accès offerts à tous les résumés audio.
               </p>
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4">Commencer l'écoute</Button>
+              <Button
+                variant="outline"
+                className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 border-white text-lg px-8 py-4 font-bold shadow-lg"
+              >
+                Commencer l'écoute
+              </Button>
               <p className="text-sm mt-4 opacity-75">Activez avec *789*1# depuis votre mobile</p>
             </div>
           </section>
@@ -295,7 +300,12 @@ export default function LandingPage() {
               <p className="text-xl mb-8 opacity-90">
                 تريد الاكتشاف؟ استفد من 3 أيام وصول مجاني لجميع الملخصات الصوتية.
               </p>
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 text-lg px-8 py-4">ابدأ الاستماع</Button>
+              <Button
+                variant="outline"
+                className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 border-white text-lg px-8 py-4 font-bold shadow-lg"
+              >
+                ابدأ الاستماع
+              </Button>
               <p className="text-sm mt-4 opacity-75">فعّل بـ *789*1# من هاتفك المحمول</p>
             </div>
           </section>

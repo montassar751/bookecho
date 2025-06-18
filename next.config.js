@@ -4,8 +4,9 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   images: {
+    domains: [],
     formats: ["image/webp", "image/avif"],
-    unoptimized: false,
+    unoptimized: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

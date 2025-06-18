@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
+import Swal from 'sweetalert2'
 
 export default function LandingPage() {
   const [email, setEmail] = useState("")
@@ -33,6 +34,24 @@ export default function LandingPage() {
       setIsLoading(false)
       router.push("/thank-you")
     }, 1000)
+  }
+
+  const handleButton1Click = () => {
+    Swal.fire({
+      title: 'Button 1',
+      text: 'is working1',
+      icon: 'success'
+    })
+  }
+
+
+
+  const handleButton3Click = () => {
+    Swal.fire({
+      title: 'Button 3',
+      text: 'use client',
+      icon: 'success'
+    })
   }
 
   // Prevent hydration mismatch by not rendering until mounted
@@ -75,9 +94,24 @@ export default function LandingPage() {
                 bien plus... en format audio résumé.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  onClick={handleButton1Click}
+                >
                   🎧 Écouter un extrait gratuit
                 </Button>
+                {/* <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700"
+                  onClick={handleButton2Click}
+                >
+                  Button 2
+                </Button>
+                <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700"
+                  onClick={handleButton3Click}
+                >
+                  Button 3
+                </Button> */}
               </div>
               <p className="text-sm text-gray-500 mt-4">Composez *789*1# pour activer votre accès Premium</p>
             </div>
@@ -164,7 +198,7 @@ export default function LandingPage() {
               <Button
                 variant="outline"
                 className="bg-white text-blue-600 hover:bg-blue-50 hover:text-blue-700 border-white text-lg px-8 py-4 font-bold shadow-lg"
-              >
+              onClick={handleButton3Click} >
                 Commencer l'écoute
               </Button>
               <p className="text-sm mt-4 opacity-75">Activez avec *789*1# depuis votre mobile</p>
@@ -200,7 +234,7 @@ export default function LandingPage() {
                   <p className="text-sm text-green-800">{message}</p>
                 </div>
               )}
-              <p className="text-xs text-gray-500 mt-4">Pas de spam. Désinscription possible à tout moment.</p>
+              <p className="text-xs text-gray-500 mt-4">Pas de spam. Désinscription possible à Occupation possible à tout moment.</p>
             </div>
           </section>
         </>
@@ -220,9 +254,24 @@ export default function LandingPage() {
                 اكتشف أفكاراً قوية مستخرجة من أفضل الكتب في التطوير الشخصي والأعمال وأكثر... بصيغة ملخص صوتي.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  onClick={handleButton1Click}
+                >
                   🎧 استمع لعينة مجانية
                 </Button>
+                {/* <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700"
+                  onClick={handleButton2Click}
+                >
+                  زر 2
+                </Button>
+                <Button 
+                  className="text-lg px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700"
+                  onClick={handleButton3Click}
+                >
+                  زر 3
+                </Button> */}
               </div>
               <p className="text-sm text-gray-500 mt-4">اطلب *789*1# لتفعيل الوصول المميز</p>
             </div>
@@ -241,7 +290,9 @@ export default function LandingPage() {
                   <p className="text-gray-600 leading-relaxed">كل ملخص يستغرق بين 5 و15 دقيقة لأقصى فعالية.</p>
                 </div>
                 <div className="text-center group">
-                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors duration-200">
+                  <div
+
+ className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors duration-200">
                     <span className="text-2xl">🎤</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">أصوات ذكية طبيعية</h3>
